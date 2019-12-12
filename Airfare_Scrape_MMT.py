@@ -34,21 +34,3 @@ dfGoIB = dfGoIB[::-1]
 dfGoIB = dfGoIB[['Cheapest Fares', 'Fare (INR)', 'Date', 'Airline', 'Departure', 'Arrival']]
 print("\n\n"+City1+" - "+ City2 + " - Goibibo\n")
 print(dfGoIB[dfGoIB.columns[0:6]].to_string())
-
-
-# ~~~~~~~~~~~~~ Yatra ~~~~~~~~~~~~~~~~~~~~
-#
-# urlYat = 'https://www.yatra.com/international-flights/'+City1+'-to-'+City2+'-flights'
-#
-# if Internat in ['Y', 'y']:
-#     urlYat = 'https://www.yatra.com/international-flights/'+City1+'-to-'+City2+'-flights'
-# if Internat in ['N', 'n']:
-#     urlYat = 'https://www.yatra.com/flight-schedule/'+City1+'-to-'+City2+'-flights'
-#
-# rYat = requests.get(urlYat, headers=headerMMT)
-# time.sleep(5)
-# soup = BeautifulSoup(rYat.text, 'html.parser')
-# tables = soup.find_next('div', class_='table-responsive content lowest-fare-module mt10 mb20').find_next('table', class_='table')
-#
-# dfYat = pd.read_html(tables.prettify())
-# print(df[0])
